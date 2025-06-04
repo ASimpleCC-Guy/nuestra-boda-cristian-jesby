@@ -1,0 +1,251 @@
+:root {
+  --color-fondo: #ffffff;
+  --color-texto: #4e342e;       
+  --color-texto-secundario: #0e4d32; 
+
+  --color-sidebar: #fce88b;
+  --color-boton-principal: rgba(196, 145, 2, 0.3);
+  --color-boton-hover: rgba(196, 145, 2, 0.9);
+  --color-boton-texto: #1b4332;
+
+  --color-link: #6b8c6e;
+  --color-link-hover: #4f7253;
+
+  --color-acento-rosado: #f3e4e4;
+  --color-acento-lila: #d8cbe4;
+  --color-borde: #c5a880;
+}
+
+/* Estilos globales */
+body {
+  background-color: var(--color-acento-rosado);
+  color: var(--color-texto);
+  margin: 0;
+  padding: 10px 40px 60px 40px;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5 {
+  color: var(--color-texto);
+  margin-top: 0;
+}
+
+p, li {
+  color: var(--color-texto-secundario);
+}
+/* Estilos globales End*/
+
+
+
+/*Contenido de la página (2 columnas)*/
+main{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+/*--COLUMNA Nro_1-- Sección de tarjeta de invitación (2 columnas)*/
+.invitation-box {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  height: calc(100vh - 75px);
+  grid-column: span 2;
+}
+
+.col-box-invitation {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/*--COLUMNA BOX INVITATION Nro_1-- Columa que posee la información de la invitación*/
+.col-box-invitation.invitation {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  color: var(--color-texto);
+  z-index: 0;
+  padding-top: 25px;
+  padding-left: 30px;
+  border-radius: 5px 0 0 5px;
+  background-color: #f5f3f0;
+}
+.col-box-invitation.invitation p {
+  font-size: 1.4rem;
+  color: var(--color-texto-secundario);
+  margin-top: 1rem;
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.col-box-invitation.invitation .guest-name {
+  font-size: 2.7rem;
+  font-weight: 600;
+  color: var(--color-texto);
+  font-family: "Marcellus", serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+}
+.col-box-invitation.invitation .date {
+  font-size: 1.6rem;
+  color: var(--color-texto);
+  font-family: "Marcellus", serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+}
+.col-box-invitation.invitation .details {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  color: var(--color-texto-secundario);
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  list-style: none;
+  padding: 0;
+}
+.col-box-invitation.invitation .card{
+  background-color: #c49102b3;
+  border-radius: 5px;
+  margin-top: 15px;
+  width: 350px;
+  height: 150px;
+  padding: 10px;
+}
+.col-box-invitation.invitation .card button{
+  background-color: #4e342e;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  font-family: "Marcellus", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: 1rem;
+  font-style: normal;
+  transition: all ease-in-out 200ms;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: none;
+  width: auto;
+}
+.col-box-invitation.invitation .card button:hover{
+  background-color: rgba(78, 52, 46, 0.8);
+  transform: scale(1.01);
+}
+.col-box-invitation.invitation .card p, .col-box-invitation.invitation .card span {
+  margin: 0;
+  font-family: "Marcellus", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: 1rem;
+  font-style: normal;
+}
+/*--COLUMNA BOX INVITATION Nro_1-- Columa que posee la información de la invitación End*/
+
+/*--COLUMNA BOX INVITATION Nro_2-- Columa con una foto de los novios*/
+.col-box-invitation.bride-groom-photo{
+    border-radius: 0 5px 5px 0;
+    margin: 0;
+}
+.col-box-invitation.bride-groom-photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('/nosotros.jpeg');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+/*--COLUMNA BOX INVITATION Nro_2-- Columa con una foto de los novios End*/
+/*--COLUMNA Nro_1-- Sección de tarjeta de invitación End*/
+
+/*--COLUMNA Nro_2-- Sección con la información del evento*/
+.event{
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: #f5f3f0;
+  border-radius: 7px;
+}
+.event h2{
+  font-size: 1.2rem;
+  margin-block: auto;
+  font-family: "Charm", cursive;
+  font-weight: 700;
+  font-style: normal;
+  color: var(--color-texto);
+}
+.countdown {
+  font-family: "Alumni Sans SC", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.5rem;
+  color: var(--color-texto-secundario);
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+/*--COLUMNA Nro_2-- Sección con la información del evento End*/
+/*Contenido de la página End*/
+
+/*Barra de navegación*/
+nav{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+}
+.navegation{
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  box-sizing: border-box;
+  position: absolute;
+  height: 100%;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+  background-color: rgba(196, 145, 2, 0.6);
+  border-radius: 10px 10px 0 0;
+  gap: 25px;
+  overflow: hidden;
+  padding: 5px 15px 0 15px;
+  margin: 0;
+  list-style: none;
+}
+.navegation li{
+  flex-direction: column;
+  gap: 1px;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  font-size: 1.07rem;
+  font-family: "Charm", cursive;
+  font-weight: 700;
+  font-style: normal;
+  transition: all ease 0.1s;
+}
+.navegation li:hover{
+  transform: scale(1.03) translateY(-3px);
+  background-color: transparent;
+  color: #145c3b;
+}
+/*Barra de navegación End*/
