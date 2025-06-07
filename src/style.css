@@ -236,28 +236,6 @@ main{
 }
 /*Sección de vestimenta End*/
 
-.history{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  padding-top: 50px;
-}
-
-.history h1{
-  font-size: 2.5rem;
-}
-
-.history p{
-  font-size: 1.2rem;
-}
-
-.history img{
-  margin: 0 auto;
-  width: 70%;
-  border-radius: 20px;
-  object-fit: cover;
-}
-
 /*Sección de cómo llegar*/
 .way{
   display: grid;
@@ -336,6 +314,160 @@ main{
 }
 /*Sección de cómo llegar End*/
 
+/*Sección de nuestra historia*/
+.history{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.history h1{
+  font-size: 2.5rem;
+}
+
+.history p{
+  font-size: 1.2rem;
+}
+
+.history img{
+  margin: 0 auto;
+  width: 70%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+/*Sección de nuestra historia End*/
+
+.hotel{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.hotel h1{
+  font-size: 2rem;
+}
+.hotels h2{
+  font-size: xx-large;
+}
+
+.hotel-information{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.hotel-tags{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.hotel-tags button{
+  background-color: rgba(14, 77, 50, 0.6);
+  color: white;
+  font-weight: lighter;
+  font-size: medium;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 40px;
+  height: fit-content;
+  margin: 0;
+  transition: all ease-in-out 200ms;
+  z-index: 10001;
+}
+
+.hotel-tags button:hover{
+  background-color: rgba(14, 77, 50, 0.8);
+  cursor: pointer;
+}
+
+.hotels{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.hotel-cards-box{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 570px;
+  gap: 15px;
+}
+
+.hotel-card{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(14, 77, 50, 0.4);
+  border-radius: 10px;
+}
+
+.hotels span{
+  background-color: rgba(196, 145, 2, 1);
+  color: white;
+  padding: 5px 20px;
+  border-radius: 10px;
+}
+
+.hotels a{
+  background-color: rgba(14, 77, 50, 1);
+  color: white;
+  padding: 5px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all ease 300ms;
+}
+
+.hotels a span{
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.hotels a:hover{
+  background-color: rgba(14, 77, 50, 0.7);
+}
+.hotels a:visited{
+  color: white;
+}
+
+.hotel-card h3{
+  font-size: x-large;
+  color: rgb(134, 96, 0);
+  text-align: center;
+}
+
+.hotel-card-information{
+  display: flex;
+  align-content: center;
+  justify-content: end;
+  padding: 5px;
+  gap: 5px;
+}
+
+.hotels-galery{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 210px 270px;
+}
+
+.hotels-galery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hotels-galery img:nth-child(1){
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.hotels-galery img:nth-child(2){
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.hotels-galery img:nth-child(3){
+  grid-column: 1 / span 2;
+  grid-row: 2;
+}
+
 /*Barra de navegación*/
 nav{
   width: 100%;
@@ -394,16 +526,16 @@ nav{
   align-items: center;
   justify-content: center;
   text-align: center;
+  color: var(--color-texto-secundario);
 }
-a:visited {
-  color: inherit;
+.navegation li a:visited {
+  color: var(--color-texto-secundario);
 }
+/*Barra de navegación End*/
 
 .mobile{
   display: none;
 }
-/*Barra de navegación End*/
-
 @media (max-width: 768px) {
   main{
       grid-template-columns: 1fr;
@@ -471,5 +603,30 @@ a:visited {
   .history{
     grid-template-columns: 1fr;
     padding-bottom: 100px;
+  }
+  .hotel-cards-box{
+    grid-template-columns: 1fr;
+    grid-template-rows: 500px;
+    gap: 15px;
+  }
+  .hotel-tags{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+  }
+  .hotel-tags button{
+    height:  auto;
+  }
+  .hotels-galery{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 150px 180px;
+  }
+  .hotels span, .hotels a{
+    width: fit-content;
+  }
+  .hotel-card-information{
+    flex-direction: column;
+    align-items: end;
   }
 }
