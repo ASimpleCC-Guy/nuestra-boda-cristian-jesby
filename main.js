@@ -131,16 +131,18 @@ const segmentos = path.split('/').filter(Boolean) // ["jesby"]
 const valor = decodeURIComponent(segmentos[0])
 const gestName = document.querySelector('#guest-name')
 const persona = invitados.find(guest => normalizar(guest.guestName) === normalizar(valor))
-const gestSlot = document.querySelector('#guest-slot')
-gestName.textContent = persona?.guestName?.toUpperCase()
-gestSlot.innerHTML = `<li id="guest-slot"><strong>💌 Cupos:</strong> ${persona ? persona.slot : 1}</li>`
-const check = document.querySelector('#nav-item-check a')
-const phone = persona?.owner === 'jesby' ? '573152549452' : '573245892990'
+if (persona !== undefined) {
+  const gestSlot = document.querySelector('#guest-slot')
+  gestName.textContent = persona?.guestName?.toUpperCase()
+  gestSlot.innerHTML = `<li id="guest-slot"><strong>💌 Cupos:</strong> ${persona.slot}</li>`
+  const check = document.querySelector('#nav-item-check a')
+  const phone = persona?.owner === 'jesby' ? '573152549452' : '573245892990'
 
-if (persona !== undefined && persona?.slot > 1) {
-  const invitationText = document.querySelector('#invitation-text')
-  invitationText.innerHTML = 'Queremos que formen parte de nuestra historia,<br> acompañándonos a celebrar nuestra unión.'
-  check.href = `https://api.whatsapp.com/send?phone=${phone}&text=${persona.guestName}%20confirmamos%20la%20asistencia%20de%20los%20${persona.slot}%20invitados%0A(from%20social%20media)%20`
-} else {
-  check.href = `https://api.whatsapp.com/send?phone=${phone}&text=${persona?.guestName}%confirmo%20la%20asistencia%0A(from%20social%20media)%20`
+  if (persona?.slot > 1) {
+    const invitationText = document.querySelector('#invitation-text')
+    invitationText.innerHTML = 'Queremos que formen parte de nuestra historia,<br> acompañándonos a celebrar nuestra unión.'
+    check.href = `https://api.whatsapp.com/send?phone=${phone}&text=${persona?.guestName}%20confirmamos%20la%20asistencia%20de%20los%20${persona?.slot}%20invitados%0Apara%20la%20boda%20de%20Cristian%20y%20Jesby%20`
+  } else {
+    check.href = `https://api.whatsapp.com/send?phone=${phone}&text=${persona?.guestName}%20confirmo%20la%20asistencia%0Apara%20la%20boda%20de%20Cristian%20y%20Jesby%20`
+  }
 }
