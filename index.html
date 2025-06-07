@@ -12,382 +12,492 @@
     <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:wght@500&display=swap" rel="stylesheet">
-  <body>
-    <div id="app">
-    
-      <main>
-        <section class="invitation-box">
-            <!-- Columna con la información de la invitación -->
-            <div class="col-box-invitation invitation">
-              <!-- Nombre del invitado (encabezado personalizado) -->
-              <h2 class="guest-name" id="guest-name">NOS CASAMOS!</h2>
-              
-              <!-- Mensaje de invitación -->
-              <p id="invitation-text">
-                Queremos que formes parte de nuestra historia,<br> 
-                acompañándonos a celebrar nuestra unión.
-              </p>
+  </head>
+  <body>   
+    <!-- Contenido principal -->
+    <main>
+      <!-- Caja de invitación -->
+      <section class="invitation-box">
+          <!-- Columna con la información de la invitación -->
+          <div class="col-box-invitation invitation">
+            <!-- Nombre del invitado (encabezado personalizado) -->
+            <h2 class="guest-name" id="guest-name">NOS CASAMOS!</h2>
+            
+            <!-- Mensaje de invitación -->
+            <p id="invitation-text">
+              Queremos que formes parte de nuestra historia,<br> 
+              acompañándonos a celebrar nuestra unión.
+            </p>
+            <!-- Mensaje de invitación End -->
 
-              <!-- Fecha -->
-              <p class="date">02/05/2026 ⏳</p>
+            <!-- Fecha -->
+            <p class="date">02/05/2026 ⏳</p>
 
-              <!-- Detalles del evento -->
-              <ul class="details">
-                <li><strong>🏝️ Lugar:</strong> Entre Palmas</li>
-                <li><strong>📌</strong> Moñitos, Córdoba</li>
-                <li id="guest-slot"><strong>💌 Cupos:</strong> 1</li>
-              </ul >
+            <!-- Detalles del evento -->
+            <ul class="details">
+              <li><strong>🏝️ Lugar:</strong> Entre Palmas</li>
+              <li><strong>📌</strong> Moñitos, Córdoba</li>
+              <li id="guest-slot"><strong>💌 Cupos:</strong> 1</li>
+            </ul >
+            <!-- Detalles del evento End -->
 
-              <!-- Tarjeta de vestimenta -->
-              <aside class="card">
-                <p><strong>Colores reservados para los novios.</strong></p>
-                <p style="color: var(--color--text); margin-bottom: 10px;">blanco, beige, crema, champagne, nude y marfil</p>
-                <p><strong>Invitados ver:</strong></p> 
-                <button id="btn-outfit">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shirt-icon lucide-shirt"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></svg>
-                  Vestimenta
-                </button>
-              </aside>
-            </div>
+            <!-- Tarjeta de vestimenta -->
+            <aside class="card">
+              <p><strong>Colores reservados para los novios.</strong></p>
+              <p style="color: var(--color--text); margin-bottom: 10px;">blanco, beige, crema, champagne, nude y marfil</p>
+              <p><strong>Invitados ver:</strong></p> 
+              <button id="btn-outfit">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shirt-icon lucide-shirt"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></svg>
+                Sugerencias
+              </button>
+            </aside>
+            <!-- Tarjeta de vestimenta End -->
+          </div>
+          <!-- Columna con la información de la invitación End -->
 
-            <!-- Columna con una foto de los novios -->
-            <figure class="col-box-invitation bride-groom-photo">
-        </section>
-        
-        <aside class="event">
-          <!-- Encabezado de la pareja -->
-          <header  style="display: flex; align-items: center; justify-content: center;">   
-            <h2 style="font-size: xx-large; margin: 0;">CRISTIAN</h2>
-            <img src="/anillospng.png" height="52px" />
-            <h2 style="font-size: xx-large; margin: 0;">JESBY</h2>
-          </header >
-
-          <!-- Cuenta regresiva -->
-          <h1 style="text-align: center; font-size: x-large;">La boda es en...</h3>
-          <section class="countdown">
-              🕒
-              <span id="days">--</span> DÍAS
-              <span id="hours">--</span> HORAS
-              <span id="minutes">--</span> MIN
-              <span id="seconds">--</span> SEG
-          </section>
-
-          <!-- Línea de tiempo -->
-          <section style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
-            <img src="/timeline.png" width="280px"/>
-          </section >
-        </aside>
-      </main>
-
-       <nav>
-        <ul class="navegation">
-          <li id="nav-item-hotel">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-home"> <path d="M3 9L12 2l9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/> <polyline points="9 22 9 12 15 12 15 22"/></svg>
-            Hospedaje
-          </li>
-        
-          <li id="nav-item-outfit">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shirt-icon lucide-shirt"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></svg>
-            Vestimenta
-          </li>
-        
-          <li id="nav-item-way">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plane-icon lucide-plane"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
-            Como llegar
-          </li>
-        
-          <li id="nav-item-history">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open-text-icon lucide-book-open-text"><path d="M12 7v14"/><path d="M16 12h2"/><path d="M16 8h2"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/><path d="M6 12h2"/><path d="M6 8h2"/></svg>
-            Nuestra Historia
-          </li>
-        
-          <li id="nav-item-location">
-            <a href="https://www.instagram.com/entre_palmas_cabanas/" target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin-icon lucide-map-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
-              Entre Palmas
-            </a>
-          </li>
-        
-          <li id="nav-item-check">
-            <a href="https://api.whatsapp.com/send?phone=573245892990&text=confirmo%20la%20asistencia%20de%0A(from%20social%20media)%20" target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-check-icon lucide-calendar-check"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></svg>
-              Confirmar Asitencia
-            </a>
-          </li>
-        </ul>  
-      </nav>
-
-      <section class="outfit" id="outfit-section">
-        <h1>Vestimenta</h1>
-
-        <div style="display: flex; align-items: center; gap: 10px;">
-          <h2 id="title-outfit-women">MUJERES</h2>
-          <button id="btn-outfit-man"> ir a hombres</button>
-        </div>
-
-        <a 
-          data-pin-do="embedBoard"
-          data-pin-board-width="1200"
-          data-pin-scale-height="450"
-          data-pin-scale-width="100"
-          href="https://co.pinterest.com/valstefani/beach-wedding-ideas/"
-        >
-        </a>
-
-        <div style="display: flex; align-items: center; gap: 10px;">
-          <h2 id="title-outfit-man">HOMBRES</h2>
-          <button id="btn-outfit-women">ir a mujeres</button>
-        </div>
-
-        <a 
-          data-pin-do="embedBoard"
-          data-pin-board-width="1200"
-          data-pin-scale-height="450"
-          data-pin-scale-width="100"
-          href=" https://co.pinterest.com/lmonteverdi/beach-wedding-men/"
-        >
-        </a>
+          <!-- Columna con una foto de los novios -->
+          <figure class="col-box-invitation bride-groom-photo">
       </section>
-
-      <section class="way" id="way-section" >
-        <div class="no-mobile">
-          <h1>Cómo llegar... </h1>
-          <p style="font-size: x-large; margin: 0 0 10px 0;">🧳 🧭 🌴</p>
-          <div class="galeria-simple">
-            <img src="/nosotros.jpeg" alt="Imagen 1">
-            <img src="/entrepalmas2.png" alt="Imagen 2">
-            <img src="/entrepalmas4.jpeg" alt="Imagen 3">
-            <img src="/entrepalmas3.jpeg" alt="Imagen 3">
-            <img src="/entrepalmas1.png" alt="Imagen 1">
-          </div>  
-        </div>
+      <!-- Caja de invitación End -->
       
-        <div class="indications">
-          <h1 class="mobile">Cómo llegar... </h1>
-          <p class="mobile" style="font-size: x-large; margin: 0 0 10px 0;">🧳 🧭 🌴</p>
-          <ul>
-            <li>Aereopuerto más cercano ✈️ : Montería, Córdoba, Colombia. </li>
-            <li>Terminal de buses más cercana 🚌 : Santa Cruz de Lorica, Córdoba, Colombia. </li>
-            <li>Desde Medellín 🚗 🛵 : 12 horas </li>
-            <li>Desde Ocaña 🚗 🛵 : 8 horas </li>
-            <li>Desde Montería 🚗 🛵 : 1 hora </li>
-            <li>Desde Lorica 🚗 🛵 : 1 hora </li>
-          </ul>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d178187.9304547381!2d-76.08816490781837!3d9.294740620707811!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e59ebd745a74aa7%3A0xb183bafd1b7b1003!2sEntre%20Palmas!5e0!3m2!1ses-419!2sco!4v1749079174325!5m2!1ses-419!2sco" width="80%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        
+      <!-- Caja con la información del evento -->
+      <aside class="event">
+        <!-- Encabezado de la pareja -->
+        <header  style="display: flex; align-items: center; justify-content: center;">   
+          <h2 style="font-size: xx-large; margin: 0;">CRISTIAN</h2>
+          <img src="/anillospng.png" height="52px" />
+          <h2 style="font-size: xx-large; margin: 0;">JESBY</h2>
+        </header >
+        <!-- Encabezado de la pareja End -->
+
+        <!-- Cuenta regresiva -->
+        <h1 style="text-align: center; font-size: x-large;">La boda es en...</h3>
+        <section class="countdown">
+            🕒
+            <span id="days">--</span> DÍAS
+            <span id="hours">--</span> HORAS
+            <span id="minutes">--</span> MIN
+            <span id="seconds">--</span> SEG
+        </section>
+        <!-- Cuenta regresiva End -->
+
+        <!-- Línea de tiempo -->
+        <section style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
+          <img src="/timeline.png" width="280px"/>
+        </section >
+        <!-- Línea de tiempo End -->
+      </aside>
+      <!-- Caja con la información del evento End -->
+    </main>
+    <!-- Contenido principal End -->
+
+
+    <!-- Barra de navegación -->
+    <nav>
+      <ul class="navegation">
+        <li id="nav-item-hotel">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-home"> <path d="M3 9L12 2l9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/> <polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Hospedaje
+        </li>
+      
+        <li id="nav-item-outfit">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shirt-icon lucide-shirt"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></svg>
+          Sugerencias
+        </li>
+      
+        <li id="nav-item-way">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plane-icon lucide-plane"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+          Cómo llegar
+        </li>
+      
+        <li id="nav-item-history">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open-text-icon lucide-book-open-text"><path d="M12 7v14"/><path d="M16 12h2"/><path d="M16 8h2"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/><path d="M6 12h2"/><path d="M6 8h2"/></svg>
+          Nuestra Historia
+        </li>
+      
+        <li id="nav-item-location">
+          <a href="https://www.instagram.com/entre_palmas_cabanas/" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin-icon lucide-map-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+            Entre Palmas
+          </a>
+        </li>
+      
+        <li id="nav-item-check">
+          <a href="https://api.whatsapp.com/send?phone=573245892990&text=Confirmo%20la%20asistencia%20de%0APara%20la%20boda%20de%20Cristian%20y%20Jesby%20" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-check-icon lucide-calendar-check"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></svg>
+            Confirmar Asitencia
+          </a>
+        </li>
+      </ul>  
+    </nav>
+    <!-- Barra de navegación End -->
+
+    <!-- Sección de vestimenta -->
+    <section class="outfit" id="outfit-section">
+      <!-- Galería que solo se muestra en mobile -->
+      <div class="mobile">
+        <div class="galeria-simple">
+          <img src="/nosotros.jpeg" alt="Imagen 1">
+          <img src="/entrepalmas2.png" alt="Imagen 2">
+          <img src="/entrepalmas4.jpeg" alt="Imagen 3">
+          <img src="/entrepalmas3.jpeg" alt="Imagen 3">
+          <img src="/entrepalmas1.png" alt="Imagen 1">
+        </div>  
+      </div>
+      <!-- Galería que solo se muestra en mobile End -->
+
+      <!-- Título de vestimenta -->
+      <h1>Sugerencias de vestimenta</h1>
+
+      <!-- Cabecera de tablero pinterest mujures -->
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+        <h2 id="title-outfit-women">MUJERES</h2>
+        <button id="btn-outfit-man"> ir a hombres</button>
+      </div>
+      <!-- Cabecera de tablero pinterest mujures End -->
+
+      <!-- Tablero de pinterest mujeres -->
+      <a 
+        data-pin-do="embedBoard"
+        data-pin-board-width="1200"
+        data-pin-scale-height="450"
+        data-pin-scale-width="100"
+        href="https://co.pinterest.com/valstefani/beach-wedding-ideas/"
+      >
+      </a>
+      <!-- Tablero de pinterest mujeres End -->
+
+      <!-- Cabecera de tablero pinterest hombres -->
+      <div style="display: flex; align-items: center; gap: 10px; margin-block: 10px">
+        <h2 id="title-outfit-man">HOMBRES</h2>
+        <button id="btn-outfit-women">ir a mujeres</button>
+      </div>
+      <!-- Cabecera de tablero pinterest hombres End -->
+
+      <!-- Tablero de pinterest hombres -->
+      <a 
+        data-pin-do="embedBoard"
+        data-pin-board-width="1200"
+        data-pin-scale-height="450"
+        data-pin-scale-width="100"
+        href=" https://co.pinterest.com/lmonteverdi/beach-wedding-men/"
+      >
+      </a>
+      <!-- Tablero de pinterest hombres End -->
+    </section>
+    <!-- Sección de vestimenta End -->
+
+    <!-- Sección de cómo llegar -->
+    <section class="way" id="way-section" >
+      <!-- Cabecera con galería que solo se muestra en desktop -->
+      <div class="no-mobile">
+        <!-- Título de cómo llegar -->
+        <h1>Cómo llegar... </h1>
+        <p style="margin: 0 0 10px 0; font-size: x-large;">🧳🌴</p>
+        <!-- Título de cómo llegar End -->
+
+        <!-- Galería -->
+        <div class="galeria-simple">
+          <img src="/nosotros.jpeg" alt="Imagen 1">
+          <img src="/entrepalmas2.png" alt="Imagen 2">
+          <img src="/entrepalmas4.jpeg" alt="Imagen 3">
+          <img src="/entrepalmas3.jpeg" alt="Imagen 3">
+          <img src="/entrepalmas1.png" alt="Imagen 1">
+        </div>  
+        <!-- Galería End -->
+      </div>
+      <!-- Cabecera con galería que solo se muestra en desktop End -->
+    
+      <!-- Manual de indicaciones para llegar al sitio -->
+      <div class="indications">
+        <!-- Título del cómo llegar -->
+        <h1 class="mobile">Cómo llegar... </h1>
+
+        <!-- Indicaciones para automovil -->
+        <h2>🚗</h2>
+        <div class="way-option" class="way-option">
+          <p>Ocaña - Entre Palmas, Moñitos (9 horas)</p> 
+          <a class="show-way" href="https://maps.app.goo.gl/Y7Ty4coGXJyMnAvX9?g_st=iw" target="_blank">ver</a>
         </div>
-
-        <div class="mobile">
-          <div class="galeria-simple">
-            <img src="/nosotros.jpeg" alt="Imagen 1">
-            <img src="/entrepalmas2.png" alt="Imagen 2">
-            <img src="/entrepalmas4.jpeg" alt="Imagen 3">
-            <img src="/entrepalmas3.jpeg" alt="Imagen 3">
-            <img src="/entrepalmas1.png" alt="Imagen 1">
-          </div>  
+        <div class="way-option">
+          <p>Medellín - Entre Palmas, Moñitos (10 horas) </p> 
+          <a class="show-way" href="https://maps.app.goo.gl/rTWnHPWqt7ZHRggZA?g_st=iw" target="_blank">ver</a>
         </div>
-      </section>
+        <!-- Indicaciones para automovil End -->
 
-      <section class="hotel" id="hotel-section" style="margin-top: 20px;">
-        <div class="hotel-information">
-          <h1>Cabañas, hoteles y airbnb's en la zona</h1>
-
-          <div class="hotel-tags">
-              <button id="btn-cottage">🌅 Cabañas</button>
-              <button id="btn-hotel">🏨 Hoteles</button>
-              <button id="btn-airbnb">🛏️ Airbnb</button>
-          </div>
+        <!-- Indicaciones para avión -->
+        <h2 style="margin-top: 20px;">✈️</h2>
+        <div class="way-option">
+          <p>Aereopuerto más cercano: Montería, Córdoba, Colombia (1 hora hasta Entre Palmas, Moñitos en bus)</p>
+          <a class="show-way" href="https://www.google.com/travel/flights/search?tfs=CBwQAhopEgoyMDI1LTA2LTIzagwIAxIIL20vMDUycDdyDQgCEgkvbS8wNGt3cnAaKRIKMjAyNS0wNi0yN2oNCAISCS9tLzA0a3dycHIMCAMSCC9tLzA1MnA3QAFIAXABggELCP___________wGYAQE&tfu=EgIIACIA&hl=es-419&gl=co&client=opera-gx&curr=COP" target="_blank">ver</a>
         </div>
+        <!-- Indicaciones para avión End -->
 
-        <div class="hotels" style="margin-top: 10px;">
-          <h2 id="title-cottage">Cabañas</h2>
-          <div class="hotel-cards-box">
+        <!-- Indicaciones para bus -->
+        <h2 style="margin-top: 20px;">🚌</h2>
+        <p>Terminales de buses más cercanas:</p>
+        <p style="padding-inline-start: 20px; font-size: 1.1rem;">- Terminal Santa Cruz de Lorica, Córdoba (1 hora hasta Entre Palmas, Moñitos en bus)</p>
+        <p style="padding-inline-start: 20px; font-size: 1.1rem">- Terminal Montería, Córdoba (1 hora hasta Entre Palmas, Moñitos en bus)</p>
+        <div class="way-option">
+          <p>Ocaña ➡️ Aguachica ➡️ Montería</p> 
+          <a class="show-way" href="https://www.redbus.co/pasajes-de-bus/aguachica-a-monteria?fromCityName=Aguachica%20(Ces)%20(Todos)&fromCityId=195453&srcCountry=COL&toCityName=Monteria%20(Cor)%20(Todos)&toCityId=195200&destCountry=COL&onward=20-Jun-2025&opId=0&busType=Any" target="_blank">ver</a>
+        </div>
+        <div class="way-option">
+          <p>Medellín - Lorica</p> 
+          <a class="show-way" href="https://www.redbus.co/pasajes-de-bus/medellin-a-lorica?fromCityName=Medellin%20(Ant)%20(Todos)&fromCityId=195160&srcCountry=COL&toCityName=Lorica%20(Cor)%20(Todos)&toCityId=194924&destCountry=COL&onward=20-Jun-2025&opId=0&busType=Any" target="_blank">ver</a>
+        </div>
+        <!-- Indicaciones para bus End -->
+         
+        <!-- Mapa con la ubicación del lugar -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d178187.9304547381!2d-76.08816490781837!3d9.294740620707811!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e59ebd745a74aa7%3A0xb183bafd1b7b1003!2sEntre%20Palmas!5e0!3m2!1ses-419!2sco!4v1749079174325!5m2!1ses-419!2sco" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <!-- Manual de indicaciones para llegar al sitio End -->
+    </section>
+    <!-- Sección de cómo llegar End -->
 
-            <div class="hotel-card">
-              <h3>Casa Campo en Paso Nuevo</h3>
-              <div class="hotels-galery">
-                <img src="/casacampo3.jpg"/>
-                <img src="/casacampo1.jpg"/>
-                <img src="/casacampo2.jpg"/>
-              </div>
+    <!-- Sección de hoteles, cabañas y airbnb's -->
+    <section class="hotel" id="hotel-section" style="margin-top: 20px;">
+      <!-- Cabecera de hoteles, cabañas y airbnb's (título y botones nav) -->
+      <div class="hotel-information">
+        <h1>Cabañas, hoteles y airbnb's en la zona</h1>
+        <div class="hotel-tags">
+            <button id="btn-cottage">🌅 Cabañas</button>
+            <button id="btn-hotel">🏨 Hoteles</button>
+            <button id="btn-airbnb">🛏️ Airbnb</button>
+        </div>
+      </div>
+      <!-- Cabecera de hoteles, cabañas y airbnb's (título y botones nav) End -->
 
-              <div class="hotel-card-information">
-                <span>$33.000 por persona aprox</span>
-                <span>Capacidad: 10 👨‍👩‍👧‍👦</span>
-                <a target="_blank" href="https://www.airbnb.com.co/rooms/35080477?adults=10&check_in=2026-05-01&check_out=2026-05-02&guests=10&location=Moñitos%2C%20Córdoba&search_mode=regular_search&source_impression_id=p3_1749134539_P3UF6Bfo_ajPfzm5&previous_page_section_name=1001&federated_search_id=65680d0d-3937-4a01-b026-41da159de4d2"><span>👉 Reservar</span></a>
-              </div>
+      <!-- Información de las cabañas -->
+      <div class="hotels" style="margin-top: 10px;">
+        <!-- Título de cabañas -->
+        <h2 id="title-cottage">Cabañas</h2>
+        <!-- Tarjetas de las cabañas -->
+        <div class="hotel-cards-box">
+
+          <!-- Tarjeta con la información de una cabaña -->
+          <div class="hotel-card">
+            <h3>Casa Campo en Paso Nuevo</h3>
+            <div class="hotels-galery">
+              <img src="/casacampo3.jpg"/>
+              <img src="/casacampo1.jpg"/>
+              <img src="/casacampo2.jpg"/>
             </div>
 
-
-            <div class="hotel-card">
-              <h3>Choza en Monitos</h3>
-              <div class="hotels-galery">
-                <img src="/choza1.jpg"/>
-                <img src="/choza3.jpg"/>
-                <img src="/choza2.jpeg"/>
-              </div>
-              <div class="hotel-card-information">
-                <span>$81.000 por persona aprox</span>
-                <span>Capacidad: 9 👨‍👩‍👧‍👦</span>
-                <a href="https://www.airbnb.com.co/rooms/48609822?adults=9&wishlist_item_id=11004998925074&check_in=2026-05-01&check_out=2026-05-02&source_impression_id=p3_1749253059_P3xfb0pJI0o9eZuS&previous_page_section_name=1000&guests=9" target="_blank"><span>👉 Reservar</span></a>
-              </div>
+            <div class="hotel-card-information">
+              <span>$33.000 por persona aprox</span>
+              <span>Capacidad: 10 👨‍👩‍👧‍👦</span>
+              <a target="_blank" href="https://www.airbnb.com.co/rooms/35080477?adults=10&check_in=2026-05-01&check_out=2026-05-02&guests=10&location=Moñitos%2C%20Córdoba&search_mode=regular_search&source_impression_id=p3_1749134539_P3UF6Bfo_ajPfzm5&previous_page_section_name=1001&federated_search_id=65680d0d-3937-4a01-b026-41da159de4d2"><span>👉 Reservar</span></a>
             </div>
-
-            <div class="hotel-card">
-              <h3>Cabaña Playa cangrejo</h3>
-              <div class="hotels-galery">
-                <img src="/cabagnas3.avif"/>
-                <img src="/cabagnas2.jpeg"/>
-                <img src="/cabagnas4.jpeg"/>
-              </div>
-              <div class="hotel-card-information">
-                <span>$128.000 por persona aprox</span>
-                <span>Capacidad: 10 👨‍👩‍👧‍👦</span>
-                <a href="https://www.airbnb.com.co/rooms/1342343369731134145?check_in=2026-05-01&check_out=2026-05-02&search_mode=regular_search&source_impression_id=p3_1749171463_P3bYVBymTiwes_By&previous_page_section_name=1000&federated_search_id=a9ca89ff-a409-44d6-a253-bfb7a5d6e046" target="_blank"><span>👉 Reservar</span></a>
-              </div>
-            </div>
-
-
-            <div class="hotel-card">
-              <h3>Cabaña Bali-Barikoke</h3>
-              <div class="hotels-galery">
-                <img src="/barikoke3.jpeg"/>
-                <img src="/barikoke2.jpeg"/>
-                <img src="/barikoke4.png"/>
-              </div>
-              <div class="hotel-card-information">
-                <span>$140.000 por persona aprox</span>
-                <span>Capacidad: 6 👨‍👩‍👧‍👦</span>
-                <a href="https://www.airbnb.com.co/rooms/1008364075608447682?adults=6&check_in=2026-05-01&check_out=2026-05-02&guests=6&search_mode=regular_search&source_impression_id=p3_1749253412_P3p1i_F4P2WaHOZm&previous_page_section_name=1000&federated_search_id=de1fbc13-c05b-40b0-b953-084ec736c559" target="_blank"><span>👉 Reservar</span></a>
-                <a href="https://api.whatsapp.com/send/?phone=573103799718&text&type=phone_number&app_absent=0" target="_blank">
-                  <span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="green" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.945C.157 5.318 5.477 0 12.057 0c3.187 0 6.167 1.24 8.413 3.488a11.82 11.82 0 0 1 3.484 8.41c-.003 6.627-5.385 12.015-12.012 12.015a12.19 12.19 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.402 1.593 5.45 0 9.884-4.429 9.887-9.881.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.884 4.429-9.887 9.881a9.82 9.82 0 0 0 1.528 5.292l-.999 3.648 3.95-1.641zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.15-.198.297-.767.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.151-.174.2-.298.3-.497.099-.198.05-.372-.025-.52-.075-.149-.669-1.611-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.064 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.29.173-1.414z"/></svg> 
-                    Whatsapp
-                  </span>
-                </a>
-              </div>
-            </div>
-
           </div>
+          <!-- Tarjeta con la información de una cabaña End -->
 
-          <div class="hotels" style="margin-top: 30px;">
-            <h2 id="title-hotel">Hoteles</h2>
-            <div class="hotel-cards-box">
-              <div class="hotel-card">
-                <h3>Bungalow Palmar del Viento</h3>
-                <div class="hotels-galery">
-                  <img src="/bungalow3.jpg"/>
-                  <img src="/bungalow1.jpg"/>
-                  <img src="/bungalow2.jpg"/>
-                </div>
-
-                <div class="hotel-card-information">
-                  <span>$60.000 por persona aprox</span>
-                  <span>Capacidad: 2-5 👨‍👩‍👧‍👦</span>
-                  <a href="https://www.booking.com/hotel/co/bungalow-palmar-del-viento.html?ssne=Moñitos&ssne_untouched=Moñitos&highlighted_hotels=9702651&ss=Moñitos&dest_id=-592716&dest_type=city&hp_avform=1&origin=hp&do_availability_check=1&label=olr%3ACj0KCQjwgIXCBhDBARIsAELC9ZiihU68UDAaruRoegXKEz4C2_wvgHV1rK5cMo7J9mD2OglV9t5a86gaAmZ2EALw_wcB&sid=ac97f7ad54da49fb9efc9468d1f3008d&aid=2378099&lang=es&sb=1&src_elem=sb&src=hotel&checkin=2025-11-29&checkout=2025-11-30&group_adults=2&no_rooms=1&group_children=0#availability_target" target="_blank" ><span>👉 Reservar</span></a>
-                </div>
-              </div>
-
-              <div class="hotel-card">
-                <h3>Hotel Mirador</h3>
-                <div class="hotels-galery">
-                  <img src="/mirador1.jpeg"/>
-                  <img src="/mirador2.jpeg"/>
-                  <img src="/mirador3.jpeg"/>
-                </div>
-
-                <div class="hotel-card-information">
-                  <span>$85.000 por persona aprox</span>
-                  <span>Capacidad: 2 👨‍👩‍👧‍👦</span>
-                  <a href="https://www.airbnb.com.co/rooms/1431309391493651280?adults=2&check_in=2026-05-01&check_out=2026-05-02&guests=8&search_mode=regular_search&source_impression_id=p3_1749253125_P31B_hDorT4QdFHn&previous_page_section_name=1000&federated_search_id=268a974d-c936-4712-950f-265794831232" target="_blank" ><span>👉 Reservar</span></a>
-                </div>
-              </div>
-              
-              <div class="hotel-card">
-                <h3>Cozy Beachfront Studio</h3>
-                <div class="hotels-galery">
-                  <img src="/cozy2.jpeg"/>
-                  <img src="/cozy3.jpeg"/>
-                  <img src="/cozy1.jpeg"/>
-                </div>
-                <div class="hotel-card-information">
-                  <span>$137.000 por persona aprox</span>
-                  <span>Capacidad: 2 👨‍👩‍👧‍👦</span>
-                  <a href="https://www.airbnb.com.co/rooms/1326791048468458351?adults=2&check_in=2026-05-01&check_out=2026-05-02&guests=8&search_mode=regular_search&source_impression_id=p3_1749253125_P3YhVIxZx0cRExqb&previous_page_section_name=1000&federated_search_id=268a974d-c936-4712-950f-265794831232" target="_blank"><span>👉 Reservar</span></a>
-                </div>
-              </div>
-
-              <div class="hotel-card">
-                <h3>Hotel Mirador Bahía Rada</h3>
-                <div class="hotels-galery">
-                  <img src="/bahiarada3.jpg"/>
-                  <img src="/bahiarada1.jpg"/>
-                  <img src="/bahiarada2.jpg"/>
-                </div>
-                <div class="hotel-card-information">
-                  <span>$200.000 por persona aprox</span>
-                  <span>Capacidad: 2-6 👨‍👩‍👧‍👦</span>
-                  <a href="https://api.whatsapp.com/send?phone=573044481280&text=Deseo%20mas%20información%0Apara%20la%20boda%20de%20Cristian%20y%20Jesby%20" target="_blank"><span>👉 Reservar</span></a>
-                </div>
-              </div>
-
+          <!-- Tarjeta con la información de una cabaña -->
+          <div class="hotel-card">
+            <h3>Choza en Monitos</h3>
+            <div class="hotels-galery">
+              <img src="/choza1.jpg"/>
+              <img src="/choza3.jpg"/>
+              <img src="/choza2.jpeg"/>
+            </div>
+            <div class="hotel-card-information">
+              <span>$81.000 por persona aprox</span>
+              <span>Capacidad: 9 👨‍👩‍👧‍👦</span>
+              <a href="https://www.airbnb.com.co/rooms/48609822?adults=9&wishlist_item_id=11004998925074&check_in=2026-05-01&check_out=2026-05-02&source_impression_id=p3_1749253059_P3xfb0pJI0o9eZuS&previous_page_section_name=1000&guests=9" target="_blank"><span>👉 Reservar</span></a>
+            </div>
           </div>
+          <!-- Tarjeta con la información de una cabaña End -->
 
-          <div class="hotels" style="margin-top: 30px;">
-            <h2 id="title-airbnb">Airbnb's</h2>
-            <div class="hotel-cards-box">
-              <div class="hotel-card">
-                <h3>Casa Pargo</h3>
-                <div class="hotels-galery">
-                  <img src="/casapargo4.jpg"/>
-                  <img src="/casapargo2.jpg"/>
-                  <img src="/casapargo3.jpg"/>
-                </div>
+          <!-- Tarjeta con la información de una cabaña -->
+          <div class="hotel-card">
+            <h3>Cabaña Playa cangrejo</h3>
+            <div class="hotels-galery">
+              <img src="/cabagnas3.avif"/>
+              <img src="/cabagnas2.jpeg"/>
+              <img src="/cabagnas4.jpeg"/>
+            </div>
+            <div class="hotel-card-information">
+              <span>$128.000 por persona aprox</span>
+              <span>Capacidad: 10 👨‍👩‍👧‍👦</span>
+              <a href="https://www.airbnb.com.co/rooms/1342343369731134145?check_in=2026-05-01&check_out=2026-05-02&search_mode=regular_search&source_impression_id=p3_1749171463_P3bYVBymTiwes_By&previous_page_section_name=1000&federated_search_id=a9ca89ff-a409-44d6-a253-bfb7a5d6e046" target="_blank"><span>👉 Reservar</span></a>
+            </div>
+          </div>
+          <!-- Tarjeta con la información de una cabaña End -->
 
-                <div class="hotel-card-information">
-                  <span>$49.000 por persona aprox</span>
-                  <span>Capacidad: 2-6 👨‍👩‍👧‍👦</span>
-                  <a href="https://www.airbnb.com.co/rooms/993309864859655828?adults=2&check_in=2026-05-01&check_out=2026-05-02&guests=2&search_mode=regular_search&source_impression_id=p3_1749253125_P3IkVbz_xLywi7E_&previous_page_section_name=1000&federated_search_id=268a974d-c936-4712-950f-265794831232" target="_blank" ><span>👉 Reservar</span></a>
-                </div>
-              </div>
+          <!-- Tarjeta con la información de una cabaña -->
+          <div class="hotel-card">
+            <h3>Cabaña Bali-Barikoke</h3>
+            <div class="hotels-galery">
+              <img src="/barikoke3.jpeg"/>
+              <img src="/barikoke2.jpeg"/>
+              <img src="/barikoke4.png"/>
+            </div>
 
-              <div class="hotel-card">
-                <h3>Casa Playa</h3>
-                <div class="hotels-galery">
-                  <img src="/casaplaya1.jpeg"/>
-                  <img src="/casaplaya3.jpeg"/>
-                  <img src="/casaplaya4.jpeg"/>
-                </div>
-
-                <div class="hotel-card-information">
-                  <span>$105.000 por persona aprox</span>
-                  <span>Capacidad: 12 👨‍👩‍👧‍👦</span>
-                  <a href="https://www.airbnb.com.co/rooms/1331895570712932348?adults=4&wishlist_item_id=11004998925491&check_in=2026-05-01&check_out=2026-05-02&source_impression_id=p3_1749253327_P3ZOQhTfLCXKpdTW&previous_page_section_name=1000&guests=4" target="_blank" ><span>👉 Reservar</span></a>
-                </div>
-              </div>
-
+            <div class="hotel-card-information">
+              <span>$140.000 por persona aprox</span>
+              <span>Capacidad: 6 👨‍👩‍👧‍👦</span>
+              <a href="https://www.airbnb.com.co/rooms/1008364075608447682?adults=6&check_in=2026-05-01&check_out=2026-05-02&guests=6&search_mode=regular_search&source_impression_id=p3_1749253412_P3p1i_F4P2WaHOZm&previous_page_section_name=1000&federated_search_id=de1fbc13-c05b-40b0-b953-084ec736c559" target="_blank"><span>👉 Reservar</span></a>
+              <a href="https://api.whatsapp.com/send/?phone=573103799718&text&type=phone_number&app_absent=0" target="_blank">
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="green" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.945C.157 5.318 5.477 0 12.057 0c3.187 0 6.167 1.24 8.413 3.488a11.82 11.82 0 0 1 3.484 8.41c-.003 6.627-5.385 12.015-12.012 12.015a12.19 12.19 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.402 1.593 5.45 0 9.884-4.429 9.887-9.881.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.884 4.429-9.887 9.881a9.82 9.82 0 0 0 1.528 5.292l-.999 3.648 3.95-1.641zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.15-.198.297-.767.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.151-.174.2-.298.3-.497.099-.198.05-.372-.025-.52-.075-.149-.669-1.611-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.064 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.29.173-1.414z"/></svg> 
+                  Whatsapp
+                </span>
+              </a>
+            </div>
           </div>
 
         </div>
-        </div>
-      </section>
+        <!-- Tarjetas de las cabañas End -->
+      </div> 
+      <!-- Información de las cabañas End -->
 
-      <section class="history" id="history-section">
-        <div>
-          <h1>Nuestra historia</h1>
-          <p>
-            Dicen que cuando dos almas están destinadas a encontrarse, el universo conspira silenciosamente para unirlas. Así fue con nosotros.
-            No fue casualidad. Fue un cruce de caminos, una mirada cómplice, una risa compartida… y desde entonces, todo cobró sentido. En medio de lo cotidiano, encontramos algo extraordinario: una conexión que creció con cada palabra, cada abrazo, cada paso que dimos juntos.
-            Hoy celebramos no solo el amor que sentimos, sino el camino que hemos recorrido. Uno lleno de aprendizajes, sueños compartidos y la certeza de que el uno siempre será el hogar del otro.
-            Este día no es el inicio de nuestra historia. Es solo un capítulo más de una historia que ya es hermosa… y que apenas comienza.
-          </p>
+      <!-- Información de los hoteles -->
+      <div class="hotels" style="margin-top: 30px;">
+        <!-- Título de hoteles -->
+        <h2 id="title-hotel">Hoteles</h2>
+        <!-- Tarjetas de los hoteles -->
+        <div class="hotel-cards-box">
+          <!-- Tarjeta con la información de un hotel -->
+          <div class="hotel-card">
+            <h3>Bungalow Palmar del Viento</h3>
+            <div class="hotels-galery">
+              <img src="/bungalow3.jpg"/>
+              <img src="/bungalow1.jpg"/>
+              <img src="/bungalow2.jpg"/>
+            </div>
+
+            <div class="hotel-card-information">
+              <span>$60.000 por persona aprox</span>
+              <span>Capacidad: 2-5 👨‍👩‍👧‍👦</span>
+              <a href="https://www.booking.com/hotel/co/bungalow-palmar-del-viento.html?ssne=Moñitos&ssne_untouched=Moñitos&highlighted_hotels=9702651&ss=Moñitos&dest_id=-592716&dest_type=city&hp_avform=1&origin=hp&do_availability_check=1&label=olr%3ACj0KCQjwgIXCBhDBARIsAELC9ZiihU68UDAaruRoegXKEz4C2_wvgHV1rK5cMo7J9mD2OglV9t5a86gaAmZ2EALw_wcB&sid=ac97f7ad54da49fb9efc9468d1f3008d&aid=2378099&lang=es&sb=1&src_elem=sb&src=hotel&checkin=2025-11-29&checkout=2025-11-30&group_adults=2&no_rooms=1&group_children=0#availability_target" target="_blank" ><span>👉 Reservar</span></a>
+            </div>
+          </div>
+          <!-- Tarjeta con la información de un hotel End -->
+
+          <!-- Tarjeta con la información de un hotel -->
+          <div class="hotel-card">
+            <h3>Hotel Mirador</h3>
+            <div class="hotels-galery">
+              <img src="/mirador1.jpeg"/>
+              <img src="/mirador2.jpeg"/>
+              <img src="/mirador3.jpeg"/>
+            </div>
+
+            <div class="hotel-card-information">
+              <span>$85.000 por persona aprox</span>
+              <span>Capacidad: 2 👨‍👩‍👧‍👦</span>
+              <a href="https://www.airbnb.com.co/rooms/1431309391493651280?adults=2&check_in=2026-05-01&check_out=2026-05-02&guests=8&search_mode=regular_search&source_impression_id=p3_1749253125_P31B_hDorT4QdFHn&previous_page_section_name=1000&federated_search_id=268a974d-c936-4712-950f-265794831232" target="_blank" ><span>👉 Reservar</span></a>
+            </div>
+          </div>
+          <!-- Tarjeta con la información de un hotel End -->
+            
+          <!-- Tarjeta con la información de un hotel -->
+          <div class="hotel-card">
+            <h3>Cozy Beachfront Studio</h3>
+            <div class="hotels-galery">
+              <img src="/cozy2.jpeg"/>
+              <img src="/cozy3.jpeg"/>
+              <img src="/cozy1.jpeg"/>
+            </div>
+            <div class="hotel-card-information">
+              <span>$137.000 por persona aprox</span>
+              <span>Capacidad: 2 👨‍👩‍👧‍👦</span>
+              <a href="https://www.airbnb.com.co/rooms/1326791048468458351?adults=2&check_in=2026-05-01&check_out=2026-05-02&guests=8&search_mode=regular_search&source_impression_id=p3_1749253125_P3YhVIxZx0cRExqb&previous_page_section_name=1000&federated_search_id=268a974d-c936-4712-950f-265794831232" target="_blank"><span>👉 Reservar</span></a>
+            </div>
+          </div>
+          <!-- Tarjeta con la información de un hotel End -->
+
+          <!-- Tarjeta con la información de un hotel -->
+          <div class="hotel-card">
+            <h3>Hotel Mirador Bahía Rada</h3>
+            <div class="hotels-galery">
+              <img src="/bahiarada3.jpg"/>
+              <img src="/bahiarada1.jpg"/>
+              <img src="/bahiarada2.jpg"/>
+            </div>
+            <div class="hotel-card-information">
+              <span>$200.000 por persona aprox</span>
+              <span>Capacidad: 2-6 👨‍👩‍👧‍👦</span>
+              <a href="https://api.whatsapp.com/send?phone=573044481280&text=Deseo%20mas%20información%0Apara%20la%20boda%20de%20Cristian%20y%20Jesby%20" target="_blank"><span>👉 Reservar</span></a>
+            </div>
+          </div>
+          <!-- Tarjeta con la información de un hotel End -->
+
         </div>
-        <img src="/frentealmar.jpeg" />
-      </section>
-    </div>
+        <!-- Tarjetas de los hoteles End -->
+      </div>
+      <!-- Información de las hoteles End -->
+
+      <!-- Información de las airbnb's -->
+      <div class="hotels" style="margin-top: 30px;">
+        <!-- Título de airbnb's -->
+        <h2 id="title-airbnb">Airbnb's</h2>
+        <!-- Tarjetas de los hoteles -->
+        <div class="hotel-cards-box">
+
+          <!-- Tarjeta con la información de un airbnb -->
+          <div class="hotel-card">
+            <h3>Casa Pargo</h3>
+            <div class="hotels-galery">
+              <img src="/casapargo4.jpg"/>
+              <img src="/casapargo2.jpg"/>
+              <img src="/casapargo3.jpg"/>
+            </div>
+
+            <div class="hotel-card-information">
+              <span>$49.000 por persona aprox</span>
+              <span>Capacidad: 2-6 👨‍👩‍👧‍👦</span>
+              <a href="https://www.airbnb.com.co/rooms/993309864859655828?adults=2&check_in=2026-05-01&check_out=2026-05-02&guests=2&search_mode=regular_search&source_impression_id=p3_1749253125_P3IkVbz_xLywi7E_&previous_page_section_name=1000&federated_search_id=268a974d-c936-4712-950f-265794831232" target="_blank" ><span>👉 Reservar</span></a>
+            </div>
+          </div>
+          <!-- Tarjeta con la información de un airbnb End -->
+
+          <!-- Tarjeta con la información de un airbnb End -->
+          <div class="hotel-card">
+            <h3>Casa Playa</h3>
+            <div class="hotels-galery">
+              <img src="/casaplaya1.jpeg"/>
+              <img src="/casaplaya3.jpeg"/>
+              <img src="/casaplaya4.jpeg"/>
+            </div>
+
+            <div class="hotel-card-information">
+              <span>$105.000 por persona aprox</span>
+              <span>Capacidad: 12 👨‍👩‍👧‍👦</span>
+              <a href="https://www.airbnb.com.co/rooms/1331895570712932348?adults=4&wishlist_item_id=11004998925491&check_in=2026-05-01&check_out=2026-05-02&source_impression_id=p3_1749253327_P3ZOQhTfLCXKpdTW&previous_page_section_name=1000&guests=4" target="_blank" ><span>👉 Reservar</span></a>
+            </div>
+          </div>
+          <!-- Tarjeta con la información de un airbnb End -->
+
+        </div>
+        <!-- Tarjetas de los hoteles End -->
+      </div>
+      <!-- Información de las airbnb's End -->
+    </section>
+    <!-- Sección de hoteles, cabañas y airbnb's End -->
+
+    <!-- Sección de nuestra historia -->
+    <section class="history" id="history-section">
+      <!-- Columna nro1 con texto descriptivo y titulo -->
+      <div>
+        <h1>Nuestra historia</h1>
+        <p>
+          Dicen que cuando dos almas están destinadas a encontrarse, el universo conspira silenciosamente para unirlas. Así fue con nosotros.
+          No fue casualidad. Fue un cruce de caminos, una mirada cómplice, una risa compartida… y desde entonces, todo cobró sentido. En medio de lo cotidiano, encontramos algo extraordinario: una conexión que creció con cada palabra, cada abrazo, cada paso que dimos juntos.
+          Hoy celebramos no solo el amor que sentimos, sino el camino que hemos recorrido. Uno lleno de aprendizajes, sueños compartidos y la certeza de que el uno siempre será el hogar del otro.
+          Este día no es el inicio de nuestra historia. Es solo un capítulo más de una historia que ya es hermosa… y que apenas comienza.
+        </p>
+      </div>
+      <!-- Columna nro2 con imagen de los novios -->
+      <img src="/frentealmar.jpeg" />
+    </section>
+    <!-- Sección de hnuestra historia End -->
   </body>
 </html>
 
-<script type="module" src="/src/countdown.js"></script>
+<!-- Lógica principal de objetos DOM y parámetros -->
 <script type="module" src="/main.js"></script>
+<!-- Lógica del contador -->
+<script type="module" src="/src/countdown.js"></script>
+<!-- Lógica de tableros pinterest -->
 <script async defer src="https://assets.pinterest.com/js/pinit.js"></script>
-<script async src="//www.instagram.com/embed.js"></script>

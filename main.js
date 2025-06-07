@@ -141,8 +141,8 @@ if (persona !== undefined) {
   if (persona?.slot > 1) {
     const invitationText = document.querySelector('#invitation-text')
     invitationText.innerHTML = 'Queremos que formen parte de nuestra historia,<br> acompañándonos a celebrar nuestra unión.'
-    check.href = `https://api.whatsapp.com/send?phone=${phone}&text=${persona?.guestName}%20confirmamos%20la%20asistencia%20de%20los%20${persona?.slot}%20invitados%0Apara%20la%20boda%20de%20Cristian%20y%20Jesby%20`
+    check.href = `https://api.whatsapp.com/send?phone=${phone}&text=${persona?.guestName}%20confirmamos%20la%20asistencia%20de%20los%20${persona?.slot}%20invitados%0APara%20la%20boda%20de%20Cristian%20y%20Jesby%20`
   } else {
-    check.href = `https://api.whatsapp.com/send?phone=${phone}&text=${persona?.guestName}%20confirmo%20la%20asistencia%0Apara%20la%20boda%20de%20Cristian%20y%20Jesby%20`
+    check.href = `https://api.whatsapp.com/send?phone=${phone}&text=${persona?.guestName}%20confirmo%20la%20asistencia%0APara%20la%20boda%20de%20Cristian%20y%20Jesby%20`
   }
 }

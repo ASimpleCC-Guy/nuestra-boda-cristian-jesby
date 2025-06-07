@@ -37,6 +37,59 @@ p, li {
 }
 /* Estilos globales End*/
 
+/*Galeria*/
+.galeria-simple {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+  margin: 0 0;
+}
+
+.galeria-simple img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+  transition: all ease-in-out 200ms;
+}
+
+.galeria-simple img:nth-child(1) {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.galeria-simple img:nth-child(2){
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  height: 49%;
+  align-self: start;
+}
+
+.galeria-simple img:nth-child(3){
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  height: 49%;
+  align-self: end;
+}
+
+.galeria-simple img:nth-child(4){
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.galeria-simple img:nth-child(5){
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.galeria-simple img:hover {
+  overflow: hidden;
+  transform: scale(1.02);
+}
+/*Galeria End*/
+
 /*Contenido Principal de la página (2 columnas)*/
 main{
   display: grid;
@@ -246,11 +299,24 @@ main{
   margin: 0;
 }
 
+.way h2{
+  font-size: 1.8rem;
+  background-color: rgba(78, 52, 46, 0.4);
+  border-radius: 10px;
+}
+
 .indications{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding-top: 105px;
+  padding: 60px 0  0 20px ;
+}
+
+.indications p{
+  font-size: 1.3rem;
+}
+
+.indications h2{
+  text-align: center;
 }
 
 .indications ul{
@@ -261,57 +327,157 @@ main{
   padding-block: 5px;
 }
 
-.galeria-simple {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 10px;
-  margin: 0 0;
+.indications .show-way{
+  padding: 5px 30px;
+  font-size: large;
 }
 
-.galeria-simple img {
+.indications .way-option{
+  display: flex; 
+  gap: 10px;
+  align-items: center;
+}
+
+.indications a, .way a{
+  background-color: rgba(14, 77, 50, 0.6);
+  color: white;
+  font-weight: lighter;
+  font-size: x-large;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  height: fit-content;
+  margin: 0;
+  transition: all ease-in-out 200ms;
+  z-index: 10001;
+  text-decoration: none;
+}
+
+.indications a:hover, .way a:hover{
+  color: white;
+  cursor: pointer;
+  background-color: rgba(14, 77, 50, 0.8);
+}
+.indications a:visited, .way a:visited{
+  color: white;
+}
+/*Sección de cómo llegar End*/
+
+/*Sección de hoteles, cabañas y airbnb's*/
+.hotel{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.hotel h1{
+  font-size: 2rem;
+}
+.hotels h2{
+  font-size: 1.8rem;
+  color: var(--color-texto-secundario);
+}
+.hotel-information{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.hotel-tags{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+}
+.hotel-tags button{
+  background-color: rgba(14, 77, 50, 0.6);
+  color: white;
+  font-weight: lighter;
+  font-size: medium;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 40px;
+  height: fit-content;
+  margin: 0;
+  transition: all ease-in-out 200ms;
+  z-index: 10001;
+}
+.hotel-tags button:hover{
+  background-color: rgba(14, 77, 50, 0.8);
+  cursor: pointer;
+}
+.hotels{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.hotel-cards-box{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 570px;
+  gap: 15px;
+}
+.hotel-card{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(14, 77, 50, 0.4);
+  border-radius: 10px;
+}
+.hotels span{
+  background-color: rgba(196, 145, 2, 1);
+  color: white;
+  padding: 5px 20px;
+  border-radius: 10px;
+}
+.hotels a{
+  background-color: rgba(14, 77, 50, 1);
+  color: white;
+  padding: 5px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all ease 300ms;
+}
+.hotels a span{
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+.hotels a:hover{
+  color: white;
+  background-color: rgba(14, 77, 50, 0.7);
+}
+.hotels a:visited{
+  color: white;
+}
+.hotel-card h3{
+  font-size: x-large;
+  color: rgb(134, 96, 0);
+  text-align: center;
+}
+.hotel-card-information{
+  display: flex;
+  align-content: center;
+  justify-content: end;
+  padding: 5px;
+  gap: 5px;
+}
+.hotels-galery{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 210px 270px;
+}
+.hotels-galery img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
-  border-radius: 10px;
-  transition: all ease-in-out 200ms;
 }
-
-.galeria-simple img:nth-child(1) {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
+.hotels-galery img:nth-child(1){
+  grid-column: 1;
+  grid-row: 1;
 }
-
-.galeria-simple img:nth-child(2){
-  grid-column: 2 / 3;
-  grid-row: 1 / 2;
-  height: 49%;
-  align-self: start;
+.hotels-galery img:nth-child(2){
+  grid-column: 2;
+  grid-row: 1;
 }
-
-.galeria-simple img:nth-child(3){
-  grid-column: 2 / 3;
-  grid-row: 1 / 2;
-  height: 49%;
-  align-self: end;
+.hotels-galery img:nth-child(3){
+  grid-column: 1 / span 2;
+  grid-row: 2;
 }
-
-.galeria-simple img:nth-child(4){
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
-}
-
-.galeria-simple img:nth-child(5){
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
-}
-
-.galeria-simple img:hover {
-  overflow: hidden;
-  transform: scale(1.02);
-}
-/*Sección de cómo llegar End*/
+/*Sección de hoteles, cabañas y airbnb's End*/
 
 /*Sección de nuestra historia*/
 .history{
@@ -336,136 +502,6 @@ main{
   object-fit: cover;
 }
 /*Sección de nuestra historia End*/
-
-.hotel{
-  display: grid;
-  grid-template-columns: 1fr;
-}
-.hotel h1{
-  font-size: 2rem;
-}
-.hotels h2{
-  font-size: 1.8rem;
-}
-
-.hotel-information{
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
-.hotel-tags{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 10px;
-}
-
-.hotel-tags button{
-  background-color: rgba(14, 77, 50, 0.6);
-  color: white;
-  font-weight: lighter;
-  font-size: medium;
-  border: none;
-  border-radius: 10px;
-  padding: 10px 40px;
-  height: fit-content;
-  margin: 0;
-  transition: all ease-in-out 200ms;
-  z-index: 10001;
-}
-
-.hotel-tags button:hover{
-  background-color: rgba(14, 77, 50, 0.8);
-  cursor: pointer;
-}
-
-.hotels{
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
-.hotel-cards-box{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 570px;
-  gap: 15px;
-}
-
-.hotel-card{
-  width: 100%;
-  height: 100%;
-  background-color: rgba(14, 77, 50, 0.4);
-  border-radius: 10px;
-}
-
-.hotels span{
-  background-color: rgba(196, 145, 2, 1);
-  color: white;
-  padding: 5px 20px;
-  border-radius: 10px;
-}
-
-.hotels a{
-  background-color: rgba(14, 77, 50, 1);
-  color: white;
-  padding: 5px 20px;
-  border-radius: 10px;
-  text-decoration: none;
-  transition: all ease 300ms;
-}
-
-.hotels a span{
-  background-color: transparent;
-  border: none;
-  padding: 0;
-}
-
-.hotels a:hover{
-  background-color: rgba(14, 77, 50, 0.7);
-}
-.hotels a:visited{
-  color: white;
-}
-
-.hotel-card h3{
-  font-size: x-large;
-  color: rgb(134, 96, 0);
-  text-align: center;
-}
-
-.hotel-card-information{
-  display: flex;
-  align-content: center;
-  justify-content: end;
-  padding: 5px;
-  gap: 5px;
-}
-
-.hotels-galery{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 210px 270px;
-}
-
-.hotels-galery img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.hotels-galery img:nth-child(1){
-  grid-column: 1;
-  grid-row: 1;
-}
-
-.hotels-galery img:nth-child(2){
-  grid-column: 2;
-  grid-row: 1;
-}
-
-.hotels-galery img:nth-child(3){
-  grid-column: 1 / span 2;
-  grid-row: 2;
-}
 
 /*Barra de navegación*/
 nav{
@@ -532,6 +568,7 @@ nav{
 }
 /*Barra de navegación End*/
 
+/*Mobile estilos*/
 .mobile{
   display: none;
 }
@@ -542,7 +579,7 @@ nav{
   .invitation-box {
     grid-template-columns: 1fr; 
     grid-template-rows: 1fr;
-    height: calc(100vh - 242px);
+    height: calc(100vh - 220px);
   }
   .col-box-invitation.invitation p {
     margin: 0;
@@ -577,7 +614,7 @@ nav{
     line-height: 1.6;
   }
   .event{
-    margin-top: 20px;
+    margin-top: 5px;
     border-radius: 0 0 5px 5px;
   }
   .outfit{
@@ -629,3 +666,4 @@ nav{
     align-items: end;
   }
 }
+/*Mobile estilos End*/
