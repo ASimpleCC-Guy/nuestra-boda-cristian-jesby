@@ -128,7 +128,7 @@ const normalizar = str =>
 
 const path = window.location.pathname // Devuelve "/jesby"
 const segmentos = path.split('/').filter(Boolean) // ["jesby"]
-const valor = decodeURIComponent(segmentos[0]) // "jesby"
+const valor = decodeURIComponent(segmentos[0])
 const gestName = document.querySelector('#guest-name')
 const persona = invitados.find(guest => normalizar(guest.guestName) === normalizar(valor))
 const gestSlot = document.querySelector('#guest-slot')
@@ -136,7 +136,7 @@ gestName.textContent = persona?.guestName?.toUpperCase()
 gestSlot.innerHTML = `<li id="guest-slot"><strong>💌 Cupos:</strong> ${persona ? persona.slot : 1}</li>`
 const check = document.querySelector('#nav-item-check a')
 const phone = persona?.owner === 'jesby' ? '573152549452' : '573245892990'
-console.log(valor)
+
 if (persona !== undefined && persona?.slot > 1) {
   const invitationText = document.querySelector('#invitation-text')
   invitationText.innerHTML = 'Queremos que formen parte de nuestra historia,<br> acompañándonos a celebrar nuestra unión.'
