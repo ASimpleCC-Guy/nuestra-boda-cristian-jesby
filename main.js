@@ -61,7 +61,7 @@ btnAirbnb.addEventListener('click', () => {
 const invitados = [
   { guestName: 'Tio Chiqui', slot: 1, owner: 'cristian' },
   { guestName: 'Dario Gravel', slot: 1, owner: 'cristian' },
-  { guestName: 'Natalia y Herohi', slot: 2, owner: 'cristian' },
+  { guestName: 'Natalia y Heorhi', slot: 2, owner: 'cristian' },
   { guestName: 'Flia Cerpa Mossu', slot: 2, owner: 'cristian' },
   { guestName: 'Flia Camargo Ramirez', slot: 2, owner: 'cristian' }, // 1
   { guestName: 'Flia Valencia Orlas', slot: 2, owner: 'cristian' },
@@ -101,6 +101,7 @@ const invitados = [
   { guestName: 'Isabella Arévalo', slot: 1, owner: 'cristian' },
   { guestName: 'Diego Miranda', slot: 1, owner: 'cristian' }, // 0
   { guestName: 'Jesús Guerrero', slot: 2, owner: 'cristian' },
+  { guestName: 'Danuil y Leticia', slot: 2, owner: 'cristian' },
   { guestName: 'Zinedine Sánchez', slot: 1, owner: 'jesby' },
   { guestName: 'Giselle Neira', slot: 1, owner: 'jesby' }, // 0
   { guestName: 'Madeleine Pabon', slot: 1, owner: 'jesby' }, // 0
