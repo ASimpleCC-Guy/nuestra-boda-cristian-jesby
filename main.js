@@ -102,6 +102,7 @@ const invitados = [
   { guestName: 'Diego Miranda', slot: 1, owner: 'cristian' }, // 0
   { guestName: 'Jesús Guerrero', slot: 2, owner: 'cristian' },
   { guestName: 'Danuil y Leticia', slot: 2, owner: 'cristian' },
+  { guestName: 'fliaangaritadiaz', slot: 2, owner: 'cristian' },
   { guestName: 'Zinedine Sánchez', slot: 1, owner: 'jesby' },
   { guestName: 'Giselle Neira', slot: 1, owner: 'jesby' }, // 0
   { guestName: 'Madeleine Pabon', slot: 1, owner: 'jesby' }, // 0
