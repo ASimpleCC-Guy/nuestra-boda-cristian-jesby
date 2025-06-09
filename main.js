@@ -121,7 +121,9 @@ const invitados = [
   { guestName: 'Flia Pacheco Celedon', slot: 3, owner: 'jesby' },
   { guestName: 'Flia Florez Tarazona', slot: 4, owner: 'jesby' }, // 0
   { guestName: 'Flia Bautista Niño', slot: 3, owner: 'jesby' },
-  { guestName: 'Rocsy Niño', slot: 1, owner: 'jesby' }
+  { guestName: 'Rocsy Niño', slot: 1, owner: 'jesby' },
+  { guestName: 'Jannis Criollo', slot: 1, owner: 'jesby' },
+  { guestName: 'Freimar Antequera', slot: 1, owner: 'jesby' }
 
 ]
 
