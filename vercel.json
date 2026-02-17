@@ -1,27 +1,15 @@
 {
   "rewrites": [
-    {
-      "source": "/sitemap.xml",
-      "destination": "/sitemap.xml"
-    },
-    {
-      "source": "/googleXXXXXX1234567890.html",
-      "destination": "/googleXXXXXX1234567890.html"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/"
-    }
+    { "source": "/list", "destination": "/list/index.html" },
+    { "source": "/list/(.*)", "destination": "/list/$1" },
+
+    { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
+    { "source": "/googleXXXXXX1234567890.html", "destination": "/googleXXXXXX1234567890.html" }
   ],
   "headers": [
     {
       "source": "/sitemap.xml",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "application/xml"
-        }
-      ]
+      "headers": [{ "key": "Content-Type", "value": "application/xml" }]
     }
   ]
 }

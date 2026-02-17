@@ -125,7 +125,10 @@ const invitados = [
   { guestName: 'Jannis Criollo', slot: 1, owner: 'jesby' },
   { guestName: 'Freimar Antequera', slot: 1, owner: 'jesby' },
   { guestName: 'Sharit Álvarez', slot: 1, owner: 'jesby' },
-  { guestName: 'Alejandro y Selena', slot: 2, owner: 'jesby' }
+  { guestName: 'Alejandro y Selena', slot: 2, owner: 'jesby' },
+  { guestName: 'Cristian Navarro', slot: 2, owner: 'cristian' },
+  { guestName: 'Kevin Pestana', slot: 1, owner: 'cristian' }
+
 ]
 
 const normalizar = str =>

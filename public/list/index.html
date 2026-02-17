@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Invitados</title>
+
+  <!-- Si tienes style.css en la raíz pública / dist -->
+  <link rel="stylesheet" href="/style.css" />
+
+  <style>
+    body { font-family: Arial, sans-serif; padding: 24px; background: #f7f7f7; }
+    .wrap { max-width: 1100px; margin: 0 auto; background: #fff; padding: 20px; border-radius: 12px; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 10px 12px; border-bottom: 1px solid #eee; text-align: left; }
+    thead th { background: #2FBF9A; color: #fff; }
+    .slot { font-weight: 700; background: #f2f4f7; padding: 3px 8px; border-radius: 6px; display: inline-block; }
+    .owner-cristian { color: #1f6feb; font-weight: 700; text-transform: capitalize; }
+    .owner-jesby { color: #d63384; font-weight: 700; text-transform: capitalize; }
+    .total { margin-top: 14px; font-weight: 700; text-align: right; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Lista de invitados</h1>
+
+    <table id="tablaInvitados">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Invitado</th>
+          <th>Slots</th>
+          <th>Owner</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div class="total" id="totalCupos"></div>
+  </div>
+
+  <script>
+    const invitados = [
+      { guestName: 'Tio Chiqui', slot: 1, owner: 'cristian' },
+      { guestName: 'Dario Gravel', slot: 1, owner: 'cristian' },
+      { guestName: 'Natalia y Heorhi', slot: 2, owner: 'cristian' },
+      { guestName: 'Flia Cerpa Mossu', slot: 2, owner: 'cristian' },
+      { guestName: 'Flia Camargo Ramirez', slot: 2, owner: 'cristian' },
+      { guestName: 'Flia Valencia Orlas', slot: 2, owner: 'cristian' },
+      { guestName: 'Tomas y Yinela', slot: 2, owner: 'cristian' },
+      { guestName: 'Carolina y Andrés', slot: 2, owner: 'cristian' },
+      { guestName: 'Flia Arenas Diaz', slot: 2, owner: 'cristian' },
+      { guestName: 'Flia Cerpa Diaz', slot: 2, owner: 'cristian' },
+      { guestName: 'Luis Morales', slot: 1, owner: 'cristian' },
+      { guestName: 'Toloza Orozco', slot: 2, owner: 'cristian' },
+      { guestName: 'Karen Pacheco', slot: 1, owner: 'cristian' },
+      { guestName: 'William y Mary', slot: 3, owner: 'cristian' },
+      { guestName: 'Flia Diaz Martinez', slot: 4, owner: 'cristian' },
+      { guestName: 'Flia Ramirez Rodriguez', slot: 3, owner: 'cristian' },
+      { guestName: 'Yoeli Ramirez', slot: 2, owner: 'cristian' },
+      { guestName: 'Dennys Blanco', slot: 2, owner: 'cristian' },
+      { guestName: 'Flia Duran Ramirez', slot: 3, owner: 'cristian' },
+      { guestName: 'Tia Chava y Jhoisber', slot: 2, owner: 'cristian' },
+      { guestName: 'Tia Chela y Omar', slot: 2, owner: 'cristian' },
+      { guestName: 'Tio Omar y Estela', slot: 2, owner: 'cristian' },
+      { guestName: 'Tia Nelly', slot: 1, owner: 'cristian' },
+      { guestName: 'Flia Ramirez Salas', slot: 4, owner: 'cristian' },
+      { guestName: 'Flia Ramirez Torrado', slot: 4, owner: 'cristian' },
+      { guestName: 'Flia Diaz Flauraud', slot: 4, owner: 'cristian' },
+      { guestName: 'Flia Ramirez Leal', slot: 4, owner: 'cristian' },
+      { guestName: 'Flia Ramirez Lopez', slot: 2, owner: 'cristian' },
+      { guestName: 'Linda Ramirez', slot: 2, owner: 'cristian' },
+      { guestName: 'Walfran Ramirez', slot: 1, owner: 'cristian' },
+      { guestName: 'Flia Diaz Torrado', slot: 5, owner: 'cristian' },
+      { guestName: 'Flia Vega Pineda', slot: 3, owner: 'cristian' },
+      { guestName: 'Flia Serpa Quintero', slot: 5, owner: 'cristian' },
+      { guestName: 'Wilder Horta', slot: 1, owner: 'cristian' },
+      { guestName: 'Sergio Parra', slot: 1, owner: 'cristian' },
+      { guestName: 'Jose y Sofia', slot: 2, owner: 'cristian' },
+      { guestName: 'Yeslier y Sindy', slot: 2, owner: 'cristian' },
+      { guestName: 'Sandy Martínez', slot: 1, owner: 'cristian' },
+      { guestName: 'Fabio Contreras', slot: 1, owner: 'cristian' },
+      { guestName: 'Isabella Arévalo', slot: 1, owner: 'cristian' },
+      { guestName: 'Diego Miranda', slot: 1, owner: 'cristian' },
+      { guestName: 'Jesús Guerrero', slot: 2, owner: 'cristian' },
+      { guestName: 'Danuil y Leticia', slot: 2, owner: 'cristian' },
+      { guestName: 'Flia Angarita Diaz', slot: 2, owner: 'cristian' },
+      { guestName: 'Zinedine Sánchez', slot: 1, owner: 'jesby' },
+      { guestName: 'Giselle Neira', slot: 1, owner: 'jesby' },
+      { guestName: 'Madeleine Pabon', slot: 1, owner: 'jesby' },
+      { guestName: 'Yury Arevalo', slot: 1, owner: 'jesby' },
+      { guestName: 'Angie Rolón', slot: 1, owner: 'jesby' },
+      { guestName: 'Mayerli Pacheco', slot: 1, owner: 'jesby' },
+      { guestName: 'Ferney Niño', slot: 1, owner: 'jesby' },
+      { guestName: 'Flia Duarte Forero', slot: 2, owner: 'jesby' },
+      { guestName: 'Flia Pacheco Sanabria', slot: 2, owner: 'jesby' },
+      { guestName: 'Flia Carrascal Contreras', slot: 2, owner: 'jesby' },
+      { guestName: 'Flia Pacheco Niño', slot: 2, owner: 'jesby' },
+      { guestName: 'Luz Marina Niño', slot: 1, owner: 'jesby' },
+      { guestName: 'Flia Gaviria Pacheco', slot: 2, owner: 'jesby' },
+      { guestName: 'Flia Guerro Lazaro', slot: 2, owner: 'jesby' },
+      { guestName: 'Yulieth Niño', slot: 3, owner: 'jesby' },
+      { guestName: 'Flia Pacheco Celedon', slot: 3, owner: 'jesby' },
+      { guestName: 'Flia Florez Tarazona', slot: 4, owner: 'jesby' },
+      { guestName: 'Flia Bautista Niño', slot: 3, owner: 'jesby' },
+      { guestName: 'Rocsy Niño', slot: 1, owner: 'jesby' },
+      { guestName: 'Jannis Criollo', slot: 1, owner: 'jesby' },
+      { guestName: 'Freimar Antequera', slot: 1, owner: 'jesby' },
+      { guestName: 'Sharit Álvarez', slot: 1, owner: 'jesby' },
+      { guestName: 'Alejandro y Selena', slot: 2, owner: 'jesby' },
+      { guestName: 'Cristian Navarro', slot: 2, owner: 'cristian' },
+      { guestName: 'Kevin Pestana', slot: 1, owner: 'cristian' }
+    ];
+
+    const tbody = document.querySelector('#tablaInvitados tbody');
+    const totalCuposEl = document.getElementById('totalCupos');
+
+    let total = 0;
+
+    invitados.forEach((inv, i) => {
+      total += inv.slot;
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td>${i + 1}</td>
+        <td>${inv.guestName}</td>
+        <td><span class="slot">${inv.slot}</span></td>
+        <td class="owner-${inv.owner}">${inv.owner}</td>
+      `;
+      tbody.appendChild(tr);
+    });
+
+    totalCuposEl.textContent = `Total de cupos: ${total}`;
+  </script>
+
+  <!-- Si quieres cargar tu JS global de la web -->
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
