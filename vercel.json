@@ -4,7 +4,9 @@
     { "source": "/list/(.*)", "destination": "/list/$1" },
 
     { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
-    { "source": "/googleXXXXXX1234567890.html", "destination": "/googleXXXXXX1234567890.html" }
+    { "source": "/googleXXXXXX1234567890.html", "destination": "/googleXXXXXX1234567890.html" },
+
+    { "source": "/(.*)", "destination": "/index.html" }
   ],
   "headers": [
     {
