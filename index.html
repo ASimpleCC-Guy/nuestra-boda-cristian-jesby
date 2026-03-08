@@ -21,6 +21,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:wght@500&display=swap" rel="stylesheet">
   </head>
   <body>   
+    <div id="login-screen">
+    <div class="login-box">
+      <h2>Hola</h2>
+      <p>Ingresa la contraseña</p>
+      <input
+        type="password"
+        id="password-input"
+        placeholder="Contraseña"
+        autocomplete="off"
+      />
+      <button id="login-button">Entrar</button>
+      <p id="login-error" style="display: none;">Contraseña incorrecta</p>
+    </div>
+  </div>
+
+  <div id="protected-content" style="display: none;">
     <!-- Contenido principal -->
     <main>
       <!-- Caja de invitación -->
@@ -505,6 +521,8 @@
       </a>
     </footer>
     <!-- Pie de página End -->
+  </div>
+
   </body>
 </html>
 
@@ -514,3 +532,104 @@
 <script type="module" src="/src/countdown.js"></script>
 <!-- Lógica de tableros pinterest -->
 <script async defer src="https://assets.pinterest.com/js/pinit.js"></script>
+
+<style>
+  #login-screen {
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 248, 244, 0.98);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+    padding: 20px;
+  }
+
+  .login-box {
+    width: 100%;
+    max-width: 380px;
+    background: white;
+    padding: 30px 24px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    text-align: center;
+    font-family: 'Marcellus', serif;
+  }
+
+  .login-box h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  .login-box p {
+    margin-bottom: 16px;
+  }
+
+  #password-input {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 16px;
+    border: 1px solid #d8cfc8;
+    border-radius: 10px;
+    outline: none;
+    box-sizing: border-box;
+    margin-bottom: 12px;
+  }
+
+  #login-button {
+    width: 100%;
+    padding: 12px 14px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Marcellus', serif;
+    background: #c89f94;
+    color: white;
+  }
+
+  #login-button:hover {
+    opacity: 0.92;
+  }
+
+  #login-error {
+    color: #b42318;
+    margin-top: 12px;
+    font-size: 14px;
+  }
+</style>
+
+<script>
+  const PASSWORD = "0502";
+
+  const loginScreen = document.getElementById("login-screen");
+  const protectedContent = document.getElementById("protected-content");
+  const passwordInput = document.getElementById("password-input");
+  const loginButton = document.getElementById("login-button");
+  const loginError = document.getElementById("login-error");
+
+  function checkPassword() {
+    if (passwordInput.value === PASSWORD) {
+      loginScreen.style.display = "none";
+      protectedContent.style.display = "block";
+      sessionStorage.setItem("wedding_access_granted", "true");
+    } else {
+      loginError.style.display = "block";
+      passwordInput.value = "";
+      passwordInput.focus();
+    }
+  }
+
+  if (sessionStorage.getItem("wedding_access_granted") === "true") {
+    loginScreen.style.display = "none";
+    protectedContent.style.display = "block";
+  }
+
+  loginButton.addEventListener("click", checkPassword);
+
+  passwordInput.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {
+      checkPassword();
+    }
+  });
+</script>
